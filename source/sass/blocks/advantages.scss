@@ -145,28 +145,23 @@
 .advantages__service-item {
   position: relative;
   min-height: 385px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 81px;
 
   &:nth-child(1) {
     background-color: $background-second-1;
     background-image: url("../../img/sprite/advantages-housing-icon.svg");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 81px;
+
   }
 
   &:nth-child(2) {
     background-image: url("../../img/sprite/advantages-food-icon.svg");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 81px;
   }
 
   &:nth-child(3) {
     background-color: $background-second-1;
     background-image: url("../../img/sprite/advantages-souvenir-icon.svg");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 81px;
   }
 }
 
