@@ -353,7 +353,7 @@ img {
 
 .advantages__item {
   position: relative;
-  min-height: 385px;
+  min-height: 384px;
   background-color: rgba(131, 179, 211, 0.2);
 }
 .advantages__item:first-child {
@@ -453,27 +453,23 @@ img {
 
 .advantages__service-item {
   position: relative;
-  min-height: 385px;
+  min-height: 384px;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 .advantages__service-item:nth-child(1) {
   background-color: rgba(131, 179, 211, 0.12);
+  background-position-y: 80px;
   background-image: url("../../img/sprite/advantages-housing-icon.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 81px;
 }
 .advantages__service-item:nth-child(2) {
+  background-position-y: 82px;
   background-image: url("../../img/sprite/advantages-food-icon.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 81px;
 }
 .advantages__service-item:nth-child(3) {
   background-color: rgba(131, 179, 211, 0.12);
+  background-position-y: 79px;
   background-image: url("../../img/sprite/advantages-souvenir-icon.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 81px;
 }
 
 .advantages__service-name {
