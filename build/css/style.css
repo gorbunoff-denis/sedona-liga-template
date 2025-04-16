@@ -279,7 +279,7 @@ img {
   position: absolute;
   content: "";
   bottom: 0;
-  height: 57px;
+  height: 56px;
   left: 0;
   right: 0;
   background-color: transparent;
@@ -353,7 +353,7 @@ img {
 
 .advantages__item {
   position: relative;
-  min-height: 384px;
+  min-height: 385px;
   background-color: rgba(131, 179, 211, 0.2);
 }
 .advantages__item:first-child {
@@ -453,7 +453,7 @@ img {
 
 .advantages__service-item {
   position: relative;
-  min-height: 384px;
+  min-height: 385px;
   background-repeat: no-repeat;
   background-position-x: center;
 }
@@ -474,7 +474,7 @@ img {
 
 .advantages__service-name {
   position: relative;
-  margin: 183px auto 30px;
+  margin: 184px auto 29px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
