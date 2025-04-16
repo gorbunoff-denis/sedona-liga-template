@@ -28,13 +28,13 @@
           <ul class="navigation__user-list list-reset">
             <li class="navigation__user-item">
               <a class="navigation__user-link">
-                <img src="./images/header/search.svg" width="20" height="20" alt="Image">
+                <img src="./img/sprite/header-search-icon.svg" width="20" height="20" alt="Image">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation__user-item">
               <a class="navigation__user-link">
-                <img src="./images/header/heart.svg" width="20" height="20" alt="Image">
+                <img src="./img/sprite/header-fovourites-icon.svg" width="20" height="20" alt="Image">
                 <span class="visually-hidden">Избранное</span>
                 <span class="navigation__user-favourites">12</span>
               </a>
@@ -47,21 +47,22 @@
           </ul>
         </nav>
       </header>
-      <!-- <main class="main-index" data-test="main">
+      <main class="main-index" data-test="main">
         <section class="hero" data-test="hero">
-          <div class="hero__img-wrapper">
-            <img src="#" alt="Фотография горной местности с приветственной надписью">
+          <div class="hero__greeting">
+            <img src="./img/svg/hero-welcome.svg" width="458" height="352" alt="Фотошграфия горной местности с приветственной надписью">
           </div>
-          <h2 class="hero__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-          <p class="hero__subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </section>
         <section class="advantages" data-test="advantages">
-          <h2 class="visually-hidden">Преимущества Седоны</h2>
+          <h2 class="advantages__header-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p class="advantages__header-subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           <ul class="advantages__list list-reset">
             <li class="advantages__item">
-              <p class="advantages__title">Настоящий городок</p>
-              <p class="advantages__subtitle">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-              <img src="#" alt="Фотография городка с историческими двухэтажными домами">
+              <div class="advantages__item-container">
+                <p class="advantages__title">Настоящий городок</p>
+                <p class="advantages__subtitle">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
+              <img src="./img/advantages-photo-1@1x.jpg" width="800" height="384" alt="Фотография городка с историческими двухэтажными домами">
             </li>
             <li class="advantages__item">
               <p class="advantages__title">Небольшая площадь</p>
@@ -76,9 +77,11 @@
               <p class="advantages__subtitle">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
             <li class="advantages__item">
-              <p class="advantages__title">Там есть мост дьявола</p>
-              <p class="advantages__subtitle">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-              <img src="#" alt="Фотография горной местности">
+              <img src="./img/advantages-photo-2@1x.jpg" alt="Фотография горной местности">
+              <div class="advantages__item-container">
+                <p class="advantages__title">Там есть мост дьявола</p>
+                <p class="advantages__subtitle">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              </div>
             </li>
           </ul>
           <p class="advantages__service-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
@@ -98,13 +101,13 @@
             </li>
           </ul>
         </section>
-        <section class="search" data-test="search">
+        <!-- <section class="search" data-test="search">
           <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
           <p class="search__title">Заинтересовались?</p>
           <p class="search__subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="search__button button-link link-reset">Поиск гостинницы в Седоне</a>
-        </section>
-        <section class="subscribe" data-test="subscribe">
+        </section> -->
+        <!-- <section class="subscribe" data-test="subscribe">
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <p class="subscribe__title">Подпишитесь на рассылку</p>
           <p class="subscribe__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -115,9 +118,9 @@
             </label>
             <button class="subscribe__button button-reset" type="submit">Подписаться</button>
           </form>
-        </section>
+        </section> -->
       </main>
-      <footer class="footer" data-test="footer">
+      <!-- <footer class="footer" data-test="footer">
         <h2 class="visually-hidden">Контакты</h2>
         <ul class="footer__social-list list-reset">
           <li class="footer__social-item">

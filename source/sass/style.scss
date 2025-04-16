@@ -1,7 +1,7 @@
 // Vendor
 // ---------------------------------
 
-@import "vendor/normalize";
+//@import "vendor/normalize";
 // Swiper 8.4.7
 // @import "vendor/swiper";
 
@@ -13,6 +13,7 @@
 //@import "global/container";
 @import "variables";
 @import "global/fonts";
+@import "global/global";
 @import "global/utils";
 
 // Blocks
@@ -22,6 +23,8 @@
 @import "blocks/container";
 @import "blocks/header";
 @import "blocks/navigation";
+@import "blocks/hero";
+@import "blocks/advantages";
 
 // ---------------------------------
 

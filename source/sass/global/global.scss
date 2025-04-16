@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+body {
+  color: $texts-second;
+  background-color: $forms-elements-2;
+  font-family: $ff-ptsans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

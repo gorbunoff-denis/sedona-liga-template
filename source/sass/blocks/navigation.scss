@@ -14,7 +14,7 @@
 .navigation__list {
   display: flex;
   flex-flow: row wrap;
-  margin-left: 28px;
+  margin-left: 29px;
 }
 
 .navigation__item {
@@ -48,6 +48,7 @@
     display: block;
     height: 2px;
     background: $texts-hover;
+    z-index: 10;
   }
 }
 
@@ -58,6 +59,7 @@
   justify-content: center;
   align-items: center;
   max-width: 268px;
+  margin-top: -1px;
 }
 
 .navigation__user-link {
@@ -66,7 +68,8 @@
   flex-direction: row wrap;
   justify-content: center;
   align-items: center;
-  padding: 22px 12px;
+  padding: 23px 12px;
+  margin: 0;
 
   &:hover path {
     fill: #756157;

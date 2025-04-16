@@ -1,0 +1,33 @@
+.hero {
+  position: relative;
+  background-image:
+  image-set(
+    "../../img/hero-background@1x.webp" type("image/webp") 1x,
+    "../../img/hero-background@2x.webp" type("image/webp") 2x,
+    "../../img/hero-background@1x.jpg" type("image/png") 1x,
+    "../../img/hero-background@2x.jpg" type("image/png") 2x
+  );
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: #ffffff;
+  background-color: #333333;
+  padding-bottom: 27px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    height: 57px;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    background-image: url("../../img/svg/hero-mask.svg");
+  }
+}
+
+.hero__greeting {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 51px 371px;
+}
