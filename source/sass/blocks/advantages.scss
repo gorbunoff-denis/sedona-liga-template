@@ -112,3 +112,83 @@
     background-color: $texts-background-active;
   }
 }
+
+.advantages__service-title {
+  color: $texts-texts-basic;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  align-self: center;
+  text-transform: uppercase;
+  margin: 63px auto 20px;
+  max-width: 505px;
+}
+
+.advantages__service-subtitle {
+  color: $texts-second;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: center;
+  align-self: center;
+  margin: 0 auto 64px;
+  max-width: 660px;
+}
+
+.advantages__service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+}
+
+.advantages__service-item {
+  position: relative;
+  min-height: 385px;
+
+  &:nth-child(1) {
+    background-color: $background-second-1;
+    background-image: url("../../img/sprite/advantages-housing-icon.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 81px;
+  }
+
+  &:nth-child(2) {
+    background-image: url("../../img/sprite/advantages-food-icon.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 81px;
+  }
+
+  &:nth-child(3) {
+    background-color: $background-second-1;
+    background-image: url("../../img/sprite/advantages-souvenir-icon.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 81px;
+  }
+}
+
+.advantages__service-name {
+  position: relative;
+  margin: 183px auto 30px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages__service-description {
+  color: $texts-second;
+  position: relative;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+  max-width: 230px;
+}
+
+

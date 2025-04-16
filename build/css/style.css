@@ -416,6 +416,87 @@ img {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.advantages__service-title {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-transform: uppercase;
+  margin: 63px auto 20px;
+  max-width: 505px;
+}
+
+.advantages__service-subtitle {
+  color: #333333;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 auto 64px;
+  max-width: 660px;
+}
+
+.advantages__service-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (400px)[3];
+  grid-template-columns: repeat(3, 400px);
+}
+
+.advantages__service-item {
+  position: relative;
+  min-height: 385px;
+}
+.advantages__service-item:nth-child(1) {
+  background-color: rgba(131, 179, 211, 0.12);
+  background-image: url("../../img/sprite/advantages-housing-icon.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 81px;
+}
+.advantages__service-item:nth-child(2) {
+  background-image: url("../../img/sprite/advantages-food-icon.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 81px;
+}
+.advantages__service-item:nth-child(3) {
+  background-color: rgba(131, 179, 211, 0.12);
+  background-image: url("../../img/sprite/advantages-souvenir-icon.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 81px;
+}
+
+.advantages__service-name {
+  position: relative;
+  margin: 183px auto 30px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages__service-description {
+  color: #333333;
+  position: relative;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+  max-width: 230px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
