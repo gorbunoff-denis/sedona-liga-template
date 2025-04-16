@@ -1,8 +1,16 @@
+/* здесь подключите шрифты */
 @font-face {
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  font-family: "";
-
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
 }

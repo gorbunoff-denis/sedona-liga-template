@@ -8,21 +8,20 @@
 // Global
 // ---------------------------------
 
+//@import "mixins";
+//@import "global/reboot";
+//@import "global/container";
 @import "variables";
-@import "mixins";
 @import "global/fonts";
-@import "global/reboot";
 @import "global/utils";
-@import "global/container";
 
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
-@import "blocks/modal";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+@import "blocks/button-link";
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/navigation";
 
 // ---------------------------------
 

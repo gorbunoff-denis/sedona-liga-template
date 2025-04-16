@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $background-basic-1;
+  box-shadow: 0 0 15px 0 $background-basic-2;
+  width: 1200px;
+  margin: 0 auto;
+}

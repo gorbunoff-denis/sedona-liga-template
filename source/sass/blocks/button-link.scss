@@ -1,0 +1,17 @@
+.button-link {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $buttons-brown-hover;
+  }
+
+  &:active {
+    color: $texts-background-active;
+    background-color: $buttons-basic;
+  }
+}

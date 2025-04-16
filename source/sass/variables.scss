@@ -1,58 +1,36 @@
-// Colors
-// ---------------------------------
+//Colors
 
-// Default
+$texts-second: #333333;
+$texts-error: #ff5757;
+$texts-hover: #756157;
+$texts-active: rgba(117, 97, 87, 0.3);
+$texts-texts-basic: #000000;
+$texts-background-deafault: #ffffff;
+$texts-background-small: rgba(255, 255, 255, 0.3);
+$texts-background-hover: rgba(255, 255, 255, 0.6);
+$texts-background-active: rgba(255, 255, 255, 0.3);
+$buttons-basic: #756157;
+$buttons-second: #82b3d3;
+$buttons-select: #7db54f;
+$buttons-disabled: #e5e5e5;
+$buttons-brown-hover: #615048;
+$buttons-blue-hover: #68a2ca;
+$buttons-green-hover: #6c9e42;
+$background-basic-1: #ffffff;
+$background-basic-2: rgba(0, 0, 0, 0.3);
+$background-basic-3: #82b3d3;
+$background-second-1: rgba(131, 179, 211, 0.12);
+$background-second-2: rgba(131, 179, 211, 0.2);
+$icons-basic: #000000;
+$icons-second: #83b3d3;
+$icons-text: #7db54f;
+$icons-hover: #756157;
+$icons-active: rgba(117, 97, 87, 0.3);
+$icons-second-hover: #68a2ca;
+$icons-second-active: rgba(104, 162, 202, 0.3);
+$forms-inputs: #3f5e72;
+$forms-elements-1: #e5e5e5;
+$forms-elements-2: #f2f2f2;
 
-$color-default-black:               #000000;
-$color-default-white:               #ffffff;
-$color-transparent:                 rgba(255, 255, 255, 0);
-
-// Project palette
-// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
-
-$color-neon-blue:                   #2c39f2;
-$color-torch-red:                   #ff1553;
-
-// Gradient
-
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-
-// Typography
-// ---------------------------------
-
-// переменная используемая в html для подключения скейлинга
-$fz-default:                        16px;
-
-// у некоторых шрифтов в ios возникают проблемы с символом рубля
-// https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble:                         "Rouble", "Arial", sans-serif;
-
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
-
-// Animation
-// ---------------------------------
-
-$tf-default:                        ease;
-$trans-default:                     0.3s $tf-default;
-
-// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
-$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
-$trans-600:                         0.6s $tf-default;
-
-// Viewports
-// ---------------------------------
-
-$vp-320:                            320px;
-$vp-375:                            375px;
-$vp-768:                            768px;
-$vp-1024:                           1024px;
-$vp-1280:                           1280px;
-$vp-1440:                           1440px;
-$vp-1920:                           1920px;
-
-// Retina
-// ---------------------------------
-
-$retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
+// Fonts
+$ff-ptsans: "PT Sans", "Arial", sans-serif;
