@@ -267,8 +267,8 @@ img {
 
 .hero {
   position: relative;
-  background-image: -webkit-image-set("../../img/hero-background@1x.webp" type("image/webp") 1x, "../../img/hero-background@2x.webp" type("image/webp") 2x, "../../img/hero-background@1x.jpg" type("image/png") 1x, "../../img/hero-background@2x.jpg" type("image/png") 2x);
-  background-image: image-set("../../img/hero-background@1x.webp" type("image/webp") 1x, "../../img/hero-background@2x.webp" type("image/webp") 2x, "../../img/hero-background@1x.jpg" type("image/png") 1x, "../../img/hero-background@2x.jpg" type("image/png") 2x);
+  background-image: -webkit-image-set("../img/hero-background@1x.webp" type("image/webp") 1x, "../img/hero-background@2x.webp" type("image/webp") 2x, "../img/hero-background@1x.jpg" type("image/png") 1x, "../img/hero-background@2x.jpg" type("image/png") 2x);
+  background-image: image-set("../img/hero-background@1x.webp" type("image/webp") 1x, "../img/hero-background@2x.webp" type("image/webp") 2x, "../img/hero-background@1x.jpg" type("image/png") 1x, "../img/hero-background@2x.jpg" type("image/png") 2x);
   background-repeat: no-repeat;
   background-size: 100% auto;
   color: #ffffff;
@@ -283,7 +283,7 @@ img {
   left: 0;
   right: 0;
   background-color: transparent;
-  background-image: url("../../img/svg/hero-mask.svg");
+  background-image: url("../img/svg/hero-mask.svg");
 }
 
 .hero__greeting {
@@ -460,16 +460,16 @@ img {
 .advantages__service-item:nth-child(1) {
   background-color: rgba(131, 179, 211, 0.12);
   background-position-y: 80px;
-  background-image: url("../../img/sprite/advantages-housing-icon.svg");
+  background-image: url("../img/sprite/advantages-housing-icon.svg");
 }
 .advantages__service-item:nth-child(2) {
   background-position-y: 82px;
-  background-image: url("../../img/sprite/advantages-food-icon.svg");
+  background-image: url("../img/sprite/advantages-food-icon.svg");
 }
 .advantages__service-item:nth-child(3) {
   background-color: rgba(131, 179, 211, 0.12);
   background-position-y: 79px;
-  background-image: url("../../img/sprite/advantages-souvenir-icon.svg");
+  background-image: url("../img/sprite/advantages-souvenir-icon.svg");
 }
 
 .advantages__service-name {
@@ -487,7 +487,7 @@ img {
   position: relative;
   margin: 0 auto;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 21px;
   text-align: center;
   max-width: 230px;

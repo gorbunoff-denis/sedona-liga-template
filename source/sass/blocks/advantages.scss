@@ -59,7 +59,7 @@
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    color: $texts-background-deafault;
+    color: $texts-background-default;
     background-color: $background-basic-3;
   }
 
@@ -67,7 +67,7 @@
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    color: $texts-background-deafault;
+    color: $texts-background-default;
     background-color: $background-basic-3;
   }
 
@@ -93,7 +93,7 @@
 }
 
 .advantages__item-container p {
-  color: $texts-background-deafault;
+  color: $texts-background-default;
 }
 
 .advantages__item-container {
@@ -151,19 +151,18 @@
   &:nth-child(1) {
     background-color: $background-second-1;
     background-position-y: 80px;
-    background-image: url("../../img/sprite/advantages-housing-icon.svg");
-
+    background-image: url("../img/sprite/advantages-housing-icon.svg");
   }
 
   &:nth-child(2) {
     background-position-y: 82px;
-    background-image: url("../../img/sprite/advantages-food-icon.svg");
+    background-image: url("../img/sprite/advantages-food-icon.svg");
   }
 
   &:nth-child(3) {
     background-color: $background-second-1;
     background-position-y: 79px;
-    background-image: url("../../img/sprite/advantages-souvenir-icon.svg");
+    background-image: url("../img/sprite/advantages-souvenir-icon.svg");
   }
 }
 
@@ -182,7 +181,7 @@
   position: relative;
   margin: 0 auto;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 21px;
   text-align: center;
   max-width: 230px;
