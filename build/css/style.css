@@ -303,9 +303,8 @@ img {
       -ms-grid-row-align: center;
       align-self: center;
   text-transform: uppercase;
-  margin: 70px auto 40px;
+  margin: 70px auto 25px;
   max-width: 630px;
-  letter-spacing: 0;
 }
 
 .advantages__header-subtitle {
@@ -318,7 +317,7 @@ img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin: 70px auto 60px;
+  margin: 0 auto 90px;
   max-width: 660px;
 }
 
@@ -329,7 +328,8 @@ img {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto 60px;
+  max-width: 175px;
 }
 
 .advantages__subtitle {
@@ -338,7 +338,8 @@ img {
   font-weight: 400;
   line-height: 21px;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 230px;
 }
 
 .advantages__list {
@@ -351,7 +352,9 @@ img {
 }
 
 .advantages__item {
+  position: relative;
   min-height: 385px;
+  background-color: rgba(131, 179, 211, 0.2);
 }
 .advantages__item:first-child {
   grid-column: 1/-1;
@@ -359,6 +362,8 @@ img {
   display: grid;
   -ms-grid-columns: 1fr 2fr;
   grid-template-columns: 1fr 2fr;
+  color: #ffffff;
+  background-color: #82b3d3;
 }
 .advantages__item:last-child {
   grid-column: 1/-1;
@@ -366,10 +371,49 @@ img {
   display: grid;
   -ms-grid-columns: 2fr 1fr;
   grid-template-columns: 2fr 1fr;
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+.advantages__item:nth-child(even) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.advantages__item:not(:first-child):not(:last-child) {
+  padding: 114px 85px;
+  color: #000000;
+}
+.advantages__item:not(:first-child):not(:last-child)::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  top: 51.5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.advantages__item-container p {
+  color: #ffffff;
 }
 
 .advantages__item-container {
+  position: relative;
   display: block;
+  padding: 103px 85px;
+}
+.advantages__item-container::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  top: 48.5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* @mixin hover-focus {
