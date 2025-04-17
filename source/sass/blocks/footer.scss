@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 70px 27px;
+}
+
+.footer__social-list {
+  display: grid;
+  width: 143px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__phones-link {
+  position: relative;
+  color: $texts-texts-basic;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 335px;
+  margin: 0;
+}
+
+.footer__logo-link {
+  position: relative;
+  top: 1px;
+}

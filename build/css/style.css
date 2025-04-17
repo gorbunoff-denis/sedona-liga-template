@@ -70,13 +70,6 @@ img {
   cursor: pointer;
 }
 
-.button-reset {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .button-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,6 +93,18 @@ img {
 .button-link:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
+}
+
+.button {
+  display: block;
+  font-family: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 10px;
 }
 
 .container {
@@ -137,6 +142,7 @@ img {
 .navigation__logo img {
   position: relative;
   font-size: 0;
+  max-height: 70px;
   z-index: 10;
 }
 
@@ -291,6 +297,10 @@ img {
   display: block;
   margin: 0 auto;
   padding: 51px 371px;
+}
+
+.hero__greeting img {
+  max-height: 384px;
 }
 
 .advantages__header-title {
@@ -491,6 +501,166 @@ img {
   line-height: 21px;
   text-align: center;
   max-width: 230px;
+}
+
+.search__title {
+  margin: 96px auto 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 592px;
+}
+
+.search__subtitle {
+  margin: 20px auto 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  max-width: 592px;
+  text-align: center;
+}
+
+.search__button {
+  color: #ffffff;
+  width: 376px;
+  min-height: 52px;
+  background-color: #756157;
+  margin: 54px auto 96px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.subscribe {
+  background-image: url("../img/subscribe-background@2x.jpg");
+  background-color: #312035;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 415px;
+  padding-top: 96px;
+}
+
+.subscribe__title {
+  color: #ffffff;
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  max-width: 475px;
+  text-align: center;
+}
+
+.subscribe__subtitle {
+  color: #ffffff;
+  margin: 20px auto 55px;
+  font-size: 22px;
+  font-weight: 400px;
+  line-height: 26px;
+  max-width: 475px;
+  text-align: center;
+}
+
+.subscribe__form {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 452px 232px;
+  grid-template-columns: 452px 232px;
+  width: 684px;
+}
+
+.subscribe__field {
+  font-family: inherit;
+  color: #ffffff;
+  width: 452px;
+  min-height: 50px;
+  color: #000000;
+  background-color: #ffffff;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  padding: 14px 50px 14px 20px;
+  letter-spacing: 0;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe__button {
+  font-family: inherit;
+  color: #ffffff;
+  width: 232px;
+  min-height: 50px;
+  background-color: #82b3d3;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  border-radius: 0 4px 4px 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 27px 70px 27px;
+}
+
+.footer__social-list {
+  display: -ms-grid;
+  display: grid;
+  width: 143px;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__phones-link {
+  position: relative;
+  color: #000000;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 335px;
+  margin: 0;
+}
+
+.footer__logo-link {
+  position: relative;
+  top: 1px;
 }
 
 /* @mixin hover-focus {
