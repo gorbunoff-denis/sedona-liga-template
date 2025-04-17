@@ -28,6 +28,14 @@
   text-transform: uppercase;
   max-width: 335px;
   margin: 0;
+
+  &:hover {
+    color: $texts-hover;
+  }
+
+  &:active {
+    color: $icons-active;
+  }
 }
 
 .footer__logo-link {

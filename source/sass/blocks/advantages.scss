@@ -92,6 +92,10 @@
   }
 }
 
+.advantages__item img {
+  max-height: 384px;
+}
+
 .advantages__item-container p {
   color: $texts-background-default;
 }
