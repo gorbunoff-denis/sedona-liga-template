@@ -26,7 +26,6 @@
   &:disable {
     background-color: $buttons-disabled;
     color: $texts-background-default;
-
   }
 }
 
@@ -41,5 +40,10 @@
   &:active {
     background-color: $buttons-second;
     color: $background-basic-2;
+  }
+
+  &:disable {
+    background-color: $buttons-disabled;
+    color: $texts-background-default;
   }
 }
