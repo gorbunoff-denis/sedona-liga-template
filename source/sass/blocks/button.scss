@@ -9,3 +9,37 @@
   cursor: pointer;
   padding: 8px 10px;
 }
+
+.button_brown {
+  background-color: $buttons-basic;
+  color: $texts-background-default;
+
+  &:hover,:focus-visible {
+    background-color: $buttons-brown-hover;
+  }
+
+  &:active {
+    background-color: $buttons-basic;
+    color: $background-basic-2;
+  }
+
+  &:disable {
+    background-color: $buttons-disabled;
+    color: $texts-background-default;
+
+  }
+}
+
+.button_blue {
+  background-color: $buttons-second;
+  color: $texts-background-default;
+
+  &:hover,:focus-visible {
+    background-color: $buttons-blue-hover;
+  }
+
+  &:active {
+    background-color: $buttons-second;
+    color: $background-basic-2;
+  }
+}

@@ -55,10 +55,8 @@
 
 .subscribe__button {
   font-family: inherit;
-  color: $texts-background-default;
   width: 232px;
   min-height: 50px;
-  background-color: $buttons-second;
   margin: 0;
   font-size: 20px;
   font-weight: 700;
@@ -66,8 +64,5 @@
   border-radius: 0 4px 4px 0;
   text-align: center;
   text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px 10px;
+
 }

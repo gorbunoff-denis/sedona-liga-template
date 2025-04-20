@@ -2,12 +2,10 @@
   position: relative;
   display: grid;
   grid-template-columns: 140px auto 268px;
-  grid-template-rows: 64px;
 }
 
 .navigation__logo img {
-  position: relative;
-  font-size: 0;
+  position: absolute;
   max-height: 70px;
   z-index: 10;
 }
@@ -19,11 +17,23 @@
 }
 
 .navigation__item {
+  position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   padding: 20px 16px;
+
+  &--active::after {
+    position: absolute;
+    content: "";
+    width: calc(100% - 30px);
+    bottom: -1px;
+    display: block;
+    height: 2px;
+    background: $texts-hover;
+    z-index: 10;
+  }
 }
 
 .navigation__link {
@@ -40,19 +50,7 @@
   &[href]:active {
     color: rgba(117, 97, 87, 0.3);
   }
-
-  &--active::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    bottom: -21px;
-    display: block;
-    height: 2px;
-    background: $texts-hover;
-    z-index: 10;
-  }
 }
-
 
 .navigation__user-list {
   display: flex;
@@ -60,7 +58,6 @@
   justify-content: center;
   align-items: center;
   max-width: 268px;
-  margin-top: -1px;
 }
 
 .navigation__user-link {
@@ -71,9 +68,12 @@
   align-items: center;
   padding: 23px 12px;
   margin: 0;
+  width: 44px;
+  cursor: pointer;
 
   &--search {
     background: url("../img/sprite/header-search-icon.svg") no-repeat center;
+    left: 1px;
   }
 
   &--favourites {
@@ -81,7 +81,6 @@
     background: url("../img/sprite/header-fovourites-icon.svg") no-repeat center;
   }
 }
-
 
 .navigation__user-favourites {
   position: absolute;
@@ -104,8 +103,6 @@
   width: 160px;
   max-width: 160px;
   min-height: 36px;
-  background-color: $buttons-basic;
-  color: $texts-background-default;
   margin-left: 20px;
   font-size: 16px;
   font-weight: 700;
