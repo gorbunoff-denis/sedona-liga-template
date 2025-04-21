@@ -18,6 +18,20 @@
   align-items: center;
 }
 
+.footer__social-link path {
+  transition: fill $transition-delay;
+}
+
+.footer__social-link path {
+  &:hover, :focus {
+    fill: $icons-second-hover;
+  }
+
+  &:active {
+    fill: $icons-second-active;
+  }
+}
+
 .footer__phones-link {
   position: relative;
   color: $texts-texts-basic;
@@ -28,8 +42,9 @@
   text-transform: uppercase;
   max-width: 335px;
   margin: 0;
+  transition: color $transition-delay;
 
-  &:hover {
+  &:hover,:focus {
     color: $texts-hover;
   }
 
@@ -41,4 +56,22 @@
 .footer__logo-link {
   position: relative;
   top: 1px;
+}
+
+.footer__logo-link svg {
+  transition: fill $transition-delay;
+}
+
+.footer__logo-link {
+  &:hover,:focus {
+    svg {
+      fill: $icons-hover;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $icons-active;
+    }
+  }
 }

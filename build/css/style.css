@@ -98,6 +98,8 @@ img {
 .button_brown {
   background-color: #756157;
   color: #ffffff;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 .button_brown:hover, .button_brown :focus-visible {
   background-color: #615048;
@@ -114,6 +116,8 @@ img {
 .button_blue {
   background-color: #82b3d3;
   color: #ffffff;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 .button_blue:hover, .button_blue :focus-visible {
   background-color: #68a2ca;
@@ -121,6 +125,10 @@ img {
 .button_blue:active {
   background-color: #82b3d3;
   color: rgba(0, 0, 0, 0.3);
+}
+.button_blue:disable {
+  background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 .container {
@@ -198,11 +206,14 @@ img {
 }
 
 .navigation__link {
+  color: #000000;
   position: relative;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   text-align: left;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 .navigation__link[href]:hover {
   color: #756157;
@@ -247,14 +258,22 @@ img {
   margin: 0;
   width: 44px;
   cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 .navigation__user-link--search {
   background: url("../img/sprite/header-search-icon.svg") no-repeat center;
   left: 1px;
 }
+.navigation__user-link--search:hover {
+  opacity: 0.5;
+}
 .navigation__user-link--favourites {
   position: relative;
   background: url("../img/sprite/header-fovourites-icon.svg") no-repeat center;
+}
+.navigation__user-link--favourites:hover {
+  opacity: 0.5;
 }
 
 .navigation__user-favourites {
@@ -484,22 +503,23 @@ img {
   background-repeat: no-repeat;
   background-position-x: center;
 }
-.advantages__service-item:nth-child(1) {
+.advantages__service-item:nth-child(3n-2) {
   background-color: rgba(131, 179, 211, 0.12);
   background-position-y: 80px;
   background-image: url("../img/sprite/advantages-housing-icon.svg");
 }
-.advantages__service-item:nth-child(2) {
+.advantages__service-item:nth-child(3n-1) {
   background-position-y: 82px;
   background-image: url("../img/sprite/advantages-food-icon.svg");
 }
-.advantages__service-item:nth-child(3) {
+.advantages__service-item:nth-child(3n) {
   background-color: rgba(131, 179, 211, 0.12);
   background-position-y: 79px;
   background-image: url("../img/sprite/advantages-souvenir-icon.svg");
 }
 
 .advantages__service-name {
+  color: #000000;
   position: relative;
   margin: 184px auto 29px;
   font-size: 24px;
@@ -655,6 +675,18 @@ img {
           align-items: center;
 }
 
+.footer__social-link path {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
+
+.footer__social-link path:hover, .footer__social-link path :focus {
+  fill: #68a2ca;
+}
+.footer__social-link path:active {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
 .footer__phones-link {
   position: relative;
   color: #000000;
@@ -665,8 +697,10 @@ img {
   text-transform: uppercase;
   max-width: 335px;
   margin: 0;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
-.footer__phones-link:hover {
+.footer__phones-link:hover, .footer__phones-link :focus {
   color: #756157;
 }
 .footer__phones-link:active {
@@ -676,4 +710,16 @@ img {
 .footer__logo-link {
   position: relative;
   top: 1px;
+}
+
+.footer__logo-link svg {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
+
+.footer__logo-link:hover svg, .footer__logo-link :focus svg {
+  fill: #756157;
+}
+.footer__logo-link:active svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
