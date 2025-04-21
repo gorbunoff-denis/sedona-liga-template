@@ -8,7 +8,8 @@
     "../img/filter-background@2x.jpg" type("image/jpg") 2x
   );
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  //background-size: 100% auto;
+  background-size: 100% 100%;
   color: #ffffff;
   background-color: $background-basic-2;
   padding: 35px 70px 15px;
@@ -87,9 +88,11 @@
   text-align: left;
 }
 
+
 .filter__options {
   position: relative;
-  padding: 10px 0 0 36px;
+  word-break: break-all;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.6;
@@ -100,13 +103,17 @@
   }
 }
 
+.filter__options-label {
+  padding-left: 36px;
+}
+
 .filter__options-mark {
   position: absolute;
   left: 0;
-  top: 12px;
+  top: 2px;
   width: 20px;
   height: 20px;
-  background-color: #ffffff;
+  background-color: $texts-background-default;
   border: none;
   border-radius: 4px;
 
@@ -117,16 +124,28 @@
   &:active {
     opacity: 0.3;
   }
+
+  &--radio {
+    border-radius: 50%;
+  }
 }
 
-.filter__infra-checkbox:focus ~ .filter__options-mark {
+.filter__checkbox:focus ~ .filter__options-mark {
   width: 20px;
   height: 20px;
   border-radius: 6px;
   border: 3px solid $background-basic-3;
 }
 
-.filter__infra-checkbox[type="checkbox"]:checked + .filter__options-mark::before {
+.filter__radio:focus ~ .filter__options-mark--radio  {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid $background-basic-3;
+}
+
+
+.filter__checkbox:checked + .filter__options-mark::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -135,6 +154,19 @@
   width: 12px;
   height: 10px;
   background-image: url("../img/sprite/filter-checkbox-tick-icon.svg");
+}
+
+.filter__radio:checked + .filter__options-mark--radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: $forms-inputs;
+  border-radius: 50%;
+
 }
 
 .filter__buttons-wrapper {
