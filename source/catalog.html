@@ -59,7 +59,7 @@
             </li>
           </ol>
           <form class="filter__catalog" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="filter__infra fieldset-reset">
+            <fieldset class="filter__fieldset fieldset-reset">
               <legend class="filter__legend legend-reset">Инфраструктура:</legend>
               <ul class="filter__list list-reset">
                 <li class="filter__item">
@@ -85,7 +85,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__housing fieldset-reset">
+            <fieldset class="filter__fieldset fieldset-reset">
               <legend class="filter__legend legend-reset">Тип жилья:</legend>
               <ul class="filter__list list-reset">
                 <li class="filter__item">
@@ -113,28 +113,30 @@
             </fieldset>
             <fieldset class="filter__slider fieldset-reset">
               <legend class="filter__legend legend-reset">Стоимость, ₽:</legend>
-              <label class="filter__slider-from">
-                <input class="filter__slider-min" name="from" type="number" value="0">
-                <span class="filter__slider-placeholder">от</span>
-              </label>
-              <label class="filter__slider-to">
-                <input class="filter__slider-max" name="to" type="number" value="9000">
-                <span class="filter__slider-placeholder">до</span>
-              </label>
-              <div class="filter__slider-range">
-                <div class="filter__slider-bar">
-                  <button class="filter__slider-toggle" id="toggle-min" type="button">
+              <div class="filter__inputs-wrapper">
+                <label class="filter__slider-label">
+                  <input class="filter__slider-input" name="from" type="number" value="0">
+                  <span class="filter__slider-placeholder">от</span>
+                </label>
+                <label class="filter__slider-label">
+                  <input class="filter__slider-input filter__slider-input--max" name="to" type="number" value="9000">
+                  <span class="filter__slider-placeholder">до</span>
+                </label>
+              </div>
+              <div class="filter__slider-scale">
+                <div class="filter__slider-range">
+                  <button class="filter__slider-toggle filter__slider-toggle--min" id="toggle-min button-reset" type="button">
                     <span class="visually-hidden">Изменить минимальную цену.</span>
                   </button>
-                  <button class="filter__slider-toggle" id="toggle-max" type="button">
+                  <button class="filter__slider-toggle filter__slider-toggle--max button-reset" id="toggle-max" type="button">
                     <span class="visually-hidden">Изменить максимальную цену.</span>
                   </button>
                 </div>
               </div>
             </fieldset>
             <div class="filter__buttons-wrapper">
-              <button class="filter__button filter__button--apply button-reset" type="submit">Применить</button>
-              <button class="filter__button filter__button--reset button-reset" type="reset">Сбросить</button>
+              <button class="filter__button button_blue button" type="submit">Применить</button>
+              <button class="filter__button button_transparent button" type="reset">Сбросить</button>
             </div>
           </form>
         </section>

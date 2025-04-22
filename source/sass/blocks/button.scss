@@ -50,3 +50,21 @@
     color: $texts-background-default;
   }
 }
+
+.button_transparent {
+  background-color: transparent;
+  color: $texts-background-default;
+  transition: background-color $transition-delay;
+
+  &:hover,:focus-visible {
+    color: $texts-background-hover;
+  }
+
+  &:active {
+    color: $background-basic-2;
+  }
+
+  &:disabled {
+    color: $texts-background-default;
+  }
+}

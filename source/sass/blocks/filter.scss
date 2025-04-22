@@ -8,7 +8,6 @@
     "../img/filter-background@2x.jpg" type("image/jpg") 2x
   );
   background-repeat: no-repeat;
-  //background-size: 100% auto;
   background-size: 100% 100%;
   color: #ffffff;
   background-color: $background-basic-2;
@@ -67,8 +66,8 @@
 
 .filter__catalog {
   display: grid;
-  grid-template-columns: 150px 150px auto 288px 191px;
-  gap: 70px;
+  grid-template-columns: 220px 290px 260px auto;
+  //gap: 70px;
 }
 
 .filter__legend {
@@ -88,11 +87,10 @@
   text-align: left;
 }
 
-
 .filter__options {
   position: relative;
-  word-break: break-all;
   cursor: pointer;
+  padding-left: 36px;
 
   &:hover {
     opacity: 0.6;
@@ -101,10 +99,6 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-.filter__options-label {
-  padding-left: 36px;
 }
 
 .filter__options-mark {
@@ -144,7 +138,6 @@
   border: 3px solid $background-basic-3;
 }
 
-
 .filter__checkbox:checked + .filter__options-mark::before {
   content: "";
   position: absolute;
@@ -166,10 +159,119 @@
   height: 10px;
   background-color: $forms-inputs;
   border-radius: 50%;
+}
 
+.filter__slider {
+  display: grid;
+}
+
+.filter__slider-label {
+  position: relative;
+}
+
+.filter__slider-placeholder {
+  position: absolute;
+  width: 18px;
+  height: 24px;
+  top: 14px;
+  right: 20px;
+  color: $background-basic-2;
+  overflow: hidden;
+}
+
+.filter__inputs-wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2px;
+  top: -2px;
+}
+
+.filter__slider-input {
+  width: 143px;
+  padding: 12px 45px 12px 21px;
+  border-radius: 4px 0 0 4px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  border: none;
+  overflow: hidden;
+
+  &:focus {
+    outline: 3px solid $icons-second;
+  }
+
+  &--max {
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.filter__slider-scale {
+  position: relative;
+  width: 287px;
+  height: 4px;
+  background-color: $texts-background-small;
+  border-radius: 2px;
+  margin-top: 30px;
+}
+
+.filter__slider-range {
+  position: absolute;
+  left: 0;
+  width: 226px;
+  height: 4px;
+  background-color: $background-basic-1;
+}
+
+.filter__slider-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: $background-basic-1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:focus {
+    outline: 3px solid $icons-second;
+  }
+
+  &:active {
+    outline: 2px solid $icons-second;
+  }
+
+  &--min {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+
+  &--max {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1px;
+  }
 }
 
 .filter__buttons-wrapper {
-  display: flex;
+  display: grid;
+  padding-top: 56px;
+  gap: 32px;
   flex-flow: column;
+  align-items: end;
+  justify-content: end;
+}
+
+.filter__button {
+  font-family: inherit;
+  width: 191px;
+  min-height: 36px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
 }
