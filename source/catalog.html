@@ -143,89 +143,74 @@
         <section class="catalog" data-test="catalog">
           <div class="catalog__filter">
             <h2 class="visually-hidden">Каталог гостиниц</h2>
-            <p class="catalog__title">Найдено гостиниц: <span>4</span></p>
-            <div class="catalog__filter-wrapper">
-              <select class="catalog__filter-sorting" name="catalog__filter-sorting">
-                <option value="cheap">Сначала дешёвые</option>
-                <option value="expensive">Сначала дорогие</option>
-                <option value="popular">Сначала популярные</option>
-                <option value="comfortable">Сначала комфортные</option>
-              </select>
-              <div class="catalog__view-buttons">
-                <a class="catalog__view-trigger link-reset" href="catalog.html?view=tile">
-                  <span class="visually-hidden">Показать таблицей</span>
-                </a>
-                <a class="catalog__view-trigger link-reset" href="catalog.html?view=card">
-                  <span class="visually-hidden">Показать карточкой</span>
-                </a>
-                <a class="catalog__view-trigger link-reset" href="catalog.html?view=list">
-                  <span class="visually-hidden">Показать списком</span>
-                </a>
-              </div>
+            <p class="catalog__title">Найдено гостиниц: <span>38</span></p>
+            <select class="catalog__filter-sorting" name="catalog__filter-sorting">
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
+              <option value="comfortable">Сначала комфортные</option>
+            </select>
+            <div class="catalog__view-buttons">
+              <a class="catalog__view-toggle catalog__view-toggle--active link-reset" href="catalog.html?view=tile">
+                <img src="img/sprite/catalog-toggle-table-icon.svg" alt="" width="16" height="14">
+                <span class="visually-hidden">Показать таблицей</span>
+              </a>
+              <a class="catalog__view-toggle link-reset" href="catalog.html?view=card">
+                <img src="img/sprite/catalog-toggle-card-icon.svg" alt="" width="16" height="14">
+                <span class="visually-hidden">Показать карточкой</span>
+              </a>
+              <a class="catalog__view-toggle link-reset" href="catalog.html?view=list">
+                <img src="img/sprite/catalog-toggle-list-icon.svg" alt="" width="16" height="14">
+                <span class="visually-hidden">Показать списком</span>
+              </a>
             </div>
           </div>
           <ul class="catalog__hotels-list list-reset">
             <li class="catalog__hotels-item hotel-card">
-              <a class="hotel-card__link link-reset" href="#">
-                <img class="hotel-card__image" src="#" alt="Фотография гостиницы">
-              </a>
-              <a class="hotel-card__title" href="#">
-                <h3 class="hotel-card__title">Amara Resort &amp; Spa</h3>
-              </a>
+              <img class="hotel-card__image" src="img/catalog-card-hotel-1@2x.jpg" width="300" height="212" alt="Фотография гостиницы">
+              <h3 class="hotel-card__title">Amara Resort &amp; Spa</h3>
               <p class="hotel-card__type">Гостиница</p>
               <p class="hotel-card__price">От 4000 ₽</p>
-              <a class="hotel-card__detail button-link link-reset" href="#">Подробнее</a>
-              <button class="hotel-card__button button-reset" type="button">В избранное</button>
+              <a class="hotel-card__detail button_brown button-link link-reset">Подробнее</a>
+              <button class="hotel-card__button button_blue button" type="button">В избранное</button>
               <p class="hotel-card__stars hotel-card__stars--four">
                 <span class="visually-hidden">4 звезды</span>
               </p>
               <p class="hotel-card__rating">Рейтинг: 8,5</p>
             </li>
             <li class="catalog__hotels-item hotel-card">
-              <a class="hotel-card__link link-reset" href="#">
-                <img class="hotel-card__image" src="#" alt="Фотография гостиницы">
-              </a>
-              <a class="hotel-card__title" href="#">
-                <h3 class="hotel-card__title">Villas at Poco Diablo</h3>
-              </a>
+              <img class="hotel-card__image" src="img/catalog-card-hotel-2@2x.jpg" width="300" height="212" alt="Фотография гостиницы">
+              <h3 class="hotel-card__title">Villas at Poco Diablo</h3>
               <p class="hotel-card__type">Гостиница</p>
               <p class="hotel-card__price">От 5000 ₽</p>
-              <a class="hotel-card__detail button-link link-reset" href="#">Подробнее</a>
-              <button class="hotel-card__button hotel-card__button--checked button-reset" type="button">В избранном</button>
+              <a class="hotel-card__detail button_brown button-link link-reset">Подробнее</a>
+              <button class="hotel-card__button button_green button" type="button">В избранном</button>
               <p class="hotel-card__stars hotel-card__stars--four">
                 <span class="visually-hidden">4 звезды</span>
               </p>
               <p class="hotel-card__rating">Рейтинг: 9,2</p>
             </li>
             <li class="catalog__hotels-item hotel-card">
-              <a class="hotel-card__link link-reset" href="#">
-                <img class="hotel-card__image" src="#" alt="Фотография гостиницы">
-              </a>
-              <a class="hotel-card__title" href="#">
-                <h3 class="hotel-card__title">Desert Quail Inn</h3>
-              </a>
+              <img class="hotel-card__image" src="img/catalog-card-hotel-3@2x.jpg" width="300" height="212" alt="Фотография гостиницы">
+              <h3 class="hotel-card__title">Desert Quail Inn</h3>
               <p class="hotel-card__type">Гостиница</p>
               <p class="hotel-card__price">От 2500 ₽</p>
-              <a class="hotel-card__detail button-link link-reset" href="#">Подробнее</a>
-              <button class="hotel-card__button button-reset" type="button">В избранное</button>
+              <a class="hotel-card__detail button_brown button-link link-reset">Подробнее</a>
+              <button class="hotel-card__button button_blue button" type="button">В избранное</button>
               <p class="hotel-card__stars hotel-card__stars--three">
                 <span class="visually-hidden">3 звезды</span>
               </p>
               <p class="hotel-card__rating">Рейтинг: 6,9</p>
             </li>
             <li class="catalog__hotels-item hotel-card">
-              <a class="hotel-card__link link-reset" href="#">
-                <img class="hotel-card__image" src="#" alt="Фотография гостиницы">
-              </a>
-              <a class="hotel-card__title" href="#">
-                <h3 class="hotel-card-title">GreenTree Inn</h3>
-              </a>
+              <img class="hotel-card__image" src="img/catalog-card-hotel-4@2x.jpg" width="300" height="212" alt="Фотография гостиницы">
+              <h3 class="hotel-card__title">GreenTree Inn</h3>
               <p class="hotel-card__type">Гостиница</p>
-              <p class="hotel-card__price">От 3000 ₽</p>
-              <a class="hotel-card__detail button-link link-reset" href="#">Подробнее</a>
-              <button class="hotel-card__button button-reset" type="button">В избранное</button>
+              <p class="hotel-card__price">От 1500 ₽</p>
+              <a class="hotel-card__detail button_brown button-link link-reset">Подробнее</a>
+              <button class="hotel-card__button button_blue button" type="button">В избранное</button>
               <p class="hotel-card__stars hotel-card__stars--two">
-                <span class="visually-hidden">2 звезды</span>
+                <span class="visually-hidden">4 звезды</span>
               </p>
               <p class="hotel-card__rating">Рейтинг: 5,0</p>
             </li>

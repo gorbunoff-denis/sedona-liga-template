@@ -51,6 +51,26 @@
   }
 }
 
+.button_green {
+  background-color: $buttons-select;
+  color: $texts-background-default;
+  transition: background-color $transition-delay;
+
+  &:hover,:focus-visible {
+    background-color: $buttons-green-hover;
+  }
+
+  &:active {
+    background-color: $buttons-select;
+    color: $background-basic-2;
+  }
+
+  &:disabled {
+    background-color: $buttons-disabled;
+    color: $texts-background-default;
+  }
+}
+
 .button_transparent {
   background-color: transparent;
   color: $texts-background-default;
