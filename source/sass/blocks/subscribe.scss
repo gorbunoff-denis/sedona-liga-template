@@ -11,6 +11,23 @@
   background-repeat: no-repeat;
   min-height: 415px;
   padding-top: 96px;
+
+  &_catalog {
+    background-image: none;
+    background-color: $background-basic-1;
+  }
+
+  &_catalog > .subscribe__title {
+    color: $texts-texts-basic;
+  }
+
+  &_catalog > .subscribe__subtitle {
+    color: $texts-second;
+  }
+
+  &_catalog .subscribe__field {
+    background-color: $forms-elements-2;
+  }
 }
 
 .subscribe__title {

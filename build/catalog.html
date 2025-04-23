@@ -171,7 +171,7 @@
               <h3 class="hotel-card__title">Amara Resort &amp; Spa</h3>
               <p class="hotel-card__type">Гостиница</p>
               <p class="hotel-card__price">От 4000 ₽</p>
-              <a class="hotel-card__detail button_brown button-link link-reset">Подробнее</a>
+              <a class="hotel-card__detail button_brown button-link link-reset" href="#">Подробнее</a>
               <button class="hotel-card__button button_blue button" type="button">В избранное</button>
               <p class="hotel-card__stars hotel-card__stars--four">
                 <span class="visually-hidden">4 звезды</span>
@@ -183,7 +183,7 @@
               <h3 class="hotel-card__title">Villas at Poco Diablo</h3>
               <p class="hotel-card__type">Гостиница</p>
               <p class="hotel-card__price">От 5000 ₽</p>
-              <a class="hotel-card__detail button_brown button-link link-reset">Подробнее</a>
+              <a class="hotel-card__detail button_brown button-link link-reset" href="#">Подробнее</a>
               <button class="hotel-card__button button_green button" type="button">В избранном</button>
               <p class="hotel-card__stars hotel-card__stars--four">
                 <span class="visually-hidden">4 звезды</span>
@@ -207,7 +207,7 @@
               <h3 class="hotel-card__title">GreenTree Inn</h3>
               <p class="hotel-card__type">Гостиница</p>
               <p class="hotel-card__price">От 1500 ₽</p>
-              <a class="hotel-card__detail button_brown button-link link-reset">Подробнее</a>
+              <a class="hotel-card__detail button_brown button-link link-reset" href="#">Подробнее</a>
               <button class="hotel-card__button button_blue button" type="button">В избранное</button>
               <p class="hotel-card__stars hotel-card__stars--two">
                 <span class="visually-hidden">4 звезды</span>
@@ -216,36 +216,35 @@
             </li>
           </ul>
           <ul class="catalog__pagination list-reset">
-            <li class="catalog__pagination-item">
-              <a class="catalog__pagination-button pagination-button-current">1</a>
+            <li class="catalog__pagination-item catalog__pagination-item--current">
+              <a class="catalog__pagination-button link-reset" >1</a>
             </li>
             <li class="catalog__pagination-item">
-              <a class="catalog__pagination-button" href="#">2</a>
+              <a class="catalog__pagination-button link-reset" href="#">2</a>
             </li>
             <li class="catalog__pagination-item">
-              <a class="catalog__pagination-button" href="#">3</a>
+              <a class="catalog__pagination-button link-reset" href="#">3</a>
             </li>
             <li class="catalog__pagination-item">
-              <a class="catalog__pagination-button" href="#">4</a>
+              <a class="catalog__pagination-button link-reset" href="#">4</a>
+            </li>
+            <li class="catalog__pagination-item catalog__pagination-item--pass" >
+              <span class="catalog__pagination-pass">...</span>
             </li>
             <li class="catalog__pagination-item">
-              <span class="catalog__pagination-button catalog__pagination-button--pass">...</span>
-            </li>
-            <li class="catalog__pagination-item">
-              <a class="catalog__pagination-button" href="#">10</a>
+              <a class="catalog__pagination-button link-reset" href="#">10</a>
             </li>
           </ul>
         </section>
-        <section class="subscribe subscribe--catalog" data-test="subscribe">
-          <h2 class="visually-hidden">Подписка на рассылку</h2>
-          <p class="subscribe__title">Подпишитесь на рассылку</p>
+        <section class="subscribe subscribe_catalog" data-test="subscribe">
+          <h2 class="subscribe__title">Подпишитесь на рассылку</h2>
           <p class="subscribe__subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
             <label>
               <span class="visually-hidden">e-mail</span>
               <input class="subscribe__field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
             </label>
-            <button class="subscribe__button button-reset" type="submit">Подписаться</button>
+            <button class="subscribe__button button_blue button" type="submit">Подписаться</button>
           </form>
         </section>
       </main>
