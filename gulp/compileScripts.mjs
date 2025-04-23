@@ -17,15 +17,18 @@ const compileMainMinScripts = () =>
       .pipe(gulp.dest('build/js'));
 
 const compileMainScripts = () =>
-  browserify('source/js/main.js', {debug: true})
-      .transform('babelify', {presets: ['@babel/preset-env']})
-      .bundle()
-      .pipe(vinylSourceStream('main.js'))
-      .pipe(vinylBuffer())
-      .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(concat('main.min.js'))
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('build/js'));
+  gulp.src('source/js/*').pipe(gulp.dest('build/js'));
+  // browserify('source/js/main.js')
+  // browserify('source/js/main.js', {debug: true})
+  // .transform('babelify', {presets: ['@babel/preset-env']})
+  // .bundle()
+  // .pipe(vinylSourceStream('main.js'))
+  // .pipe(vinylBuffer())
+  // .pipe(sourcemaps.init({loadMaps: true}))
+  // .pipe(concat('main.min.js'))
+  // .pipe(sourcemaps.write('.'))
+  // .pipe
+  // (gulp.dest('build/js'));
 
 const compileVendorScripts = () =>
   browserify('source/js/vendor.js')
