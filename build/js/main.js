@@ -1,8 +1,13 @@
 const modalElement = document.getElementById('modal-search');
+const openModal = document.getElementById('open-modal');
+const closeModal = modalElement.querySelector('.modal__close-button');
 
-const openBtn = document.getElementById('open-modal');
-window.console.log('test');
-
-openBtn.addEventListener('click', () => {
+openModal.addEventListener('click', () => {
   modalElement.showModal();
 });
+
+closeModal.addEventListener('click', () => {
+  modalElement.close();
+  openModal.scrollIntoView();
+});
+
