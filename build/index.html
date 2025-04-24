@@ -7,57 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <dialog class= "modal" id="modal-search" aria-label="modal-search">
-        <button class="modal__close-button button" type="button">
-          <span class="visually-hidden">Закрыть модальное окно</span>
-        </button>
-
-          <form class="modal__search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <h2 class="modal__title">Поиск гостиницы в седоне</h2>
-            <label class="modal__label" for="check-in">Дата заезда:</label>
-            <input class="modal__input" type="text" id="check-in" name="trip-start" value="27 апреля 2020" placeholder="Укажите дату" required>
-            <p class="modal__info modal__info--error">Мы не можем отправить вас в прошлое.</p>
-            <label class="modal__label" for="check-out">Дата выезда:</label>
-            <input class="modal__input" type="text" id="check-out" name="trip-end" value="1 сентября 2023" placeholder="Укажите дату" required>
-            <p class="modal__info">На эти даты есть свободные номера. Пока есть.</p>
-            <label class="modal__label" for="adult">Взрослые:</label>
-            <div class="modal__count-box count-box">
-              <button class="count-box__button" type="button">
-                <svg class="count-box__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 9V11H17V9H3Z"/>
-                </svg>
-                <span class="visually-hidden">Увеличить количество</span>
-              </button>
-              <input class="count-box__input" id="adult" name="adult" type="number" value="2" required data-max-count="9">
-              <button class="count-box__button count-box__button--plus" type="button">
-                <svg class="count-box__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
-                </svg>
-                <span class="visually-hidden">Уменьшить количество</span>
-              </button>
-            </div>
-            <label class="modal__label modal__label--child" for="child">Дети:
-              <span class="modal__tooltip-icon"></span>
-              <span class="modal__tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-            </label>
-            <div class="modal__count-box modal__count-box--child count-box">
-              <button class="count-box__button" type="button">
-                <svg class="count-box__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 9V11H17V9H3Z"/>
-                </svg>
-                <span class="visually-hidden">Увеличить количество</span>
-              </button>
-              <input class="count-box__input" id="child" name="child" type="number" value="2" required data-max-count="9">
-              <button class="count-box__button count-box__button--plus" type="button">
-                <svg class="count-box__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
-                </svg>
-                <span class="visually-hidden">Уменьшить количество</span>
-              </button>
-            </div>
-            <button class="modal__button button_blue button" type="submit">Найти</button>
-          </form>
-    </dialog>
     <div class="container">
       <header class="header" data-test="header">
         <nav class="header__navigation navigation">
@@ -216,6 +165,56 @@
         </a>
       </footer>
     </div>
+    <dialog class= "modal" id="modal-search" aria-label="modal-search">
+      <button class="modal__close-button button" type="button">
+        <span class="visually-hidden">Закрыть модальное окно</span>
+      </button>
+      <form class="modal__search-form" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="modal__title">Поиск гостиницы в седоне</h2>
+        <label class="modal__label" for="check-in">Дата заезда:</label>
+        <input class="modal__input" type="text" id="check-in" name="trip-start" value="27 апреля 2020" placeholder="Укажите дату" required>
+        <p class="modal__info modal__info--error">Мы не можем отправить вас в прошлое.</p>
+        <label class="modal__label" for="check-out">Дата выезда:</label>
+        <input class="modal__input" type="text" id="check-out" name="trip-end" value="1 сентября 2023" placeholder="Укажите дату" required>
+        <p class="modal__info">На эти даты есть свободные номера. Пока есть.</p>
+        <label class="modal__label" for="adult">Взрослые:</label>
+        <div class="modal__count-box count-box">
+          <button class="count-box__button" type="button">
+            <svg class="count-box__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9V11H17V9H3Z"/>
+            </svg>
+            <span class="visually-hidden">Увеличить количество</span>
+          </button>
+          <input class="count-box__input" id="adult" name="adult" type="number" value="2" required data-max-count="9">
+          <button class="count-box__button count-box__button--plus" type="button">
+            <svg class="count-box__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+            </svg>
+            <span class="visually-hidden">Уменьшить количество</span>
+          </button>
+        </div>
+        <label class="modal__label modal__label--child" for="child">Дети:
+          <span class="modal__tooltip-icon"></span>
+          <span class="modal__tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+        </label>
+        <div class="modal__count-box modal__count-box--child count-box">
+          <button class="count-box__button" type="button">
+            <svg class="count-box__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9V11H17V9H3Z"/>
+            </svg>
+            <span class="visually-hidden">Увеличить количество</span>
+          </button>
+          <input class="count-box__input" id="child" name="child" type="number" value="2" required data-max-count="9">
+          <button class="count-box__button count-box__button--plus" type="button">
+            <svg class="count-box__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+            </svg>
+            <span class="visually-hidden">Уменьшить количество</span>
+          </button>
+        </div>
+        <button class="modal__button button_blue button" type="submit">Найти</button>
+      </form>
+    </dialog>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
