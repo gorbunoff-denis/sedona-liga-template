@@ -1,0 +1,54 @@
+.count-box {
+  min-height: 48px;
+}
+
+.count-box__button {
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  border-radius: 4px 0 0 4px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus .count-box__icon {
+    border: 3px solid #68a2ca;
+    border-radius: 6px;
+  }
+
+  &--plus {
+    border-radius: 0 4px 4px 0;
+  }
+}
+.count-box__button .count-box__icon {
+  fill: #756157;
+  fill-opacity: 0.3;
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    fill: #000000;
+    fill-opacity: 1;
+  }
+
+  &:active {
+    fill: #756157;
+    fill-opacity: 0.3;
+  }
+}
+
+.count-box__input {
+  color: #000000;
+  background-color: #f2f2f2;
+  width: 31px;
+  text-align: center;
+  border: none;
+  padding: 14px 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+

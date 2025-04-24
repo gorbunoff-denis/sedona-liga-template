@@ -20,7 +20,7 @@
   right: 51px;
   width: 52px;
   height: 52px;
-  background-image: url("../../img/sprite/modal-close-cross-icon.svg");
+  background-image: url("../img/sprite/modal-close-cross-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f2f2f2;
@@ -31,6 +31,7 @@
   }
 
   &:focus {
+    outline: none;
     background-color: #e6e6e6;
     border: 3px solid #83b3d3;
   }
@@ -66,6 +67,11 @@
   text-transform: capitalize;
   text-align: left;
   color: #000000;
+
+  &--child {
+    grid-column: 3;
+    position: relative;
+  }
 }
 
 .modal__input {
@@ -95,17 +101,80 @@
 
   &--error {
     color: #ff5757;
+    margin: 6px 0 26px 20px;
   }
 }
 
 .modal__count-box {
   grid-column: 2;
   display: flex;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &--child {
+    grid-column: 4;
+  }
 }
 
 .modal__tooltip {
   display: none;
 }
+
+.modal__button {
+  margin-top: 46px;
+  grid-column: 1 / -1;
+  min-height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.modal__tooltip-icon {
+  position: absolute;
+  right: 47px;
+  bottom: 0px;
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/sprite/modal-info-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #68a2ca;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal__tooltip-text {
+  position: absolute;
+  display: none;
+  z-index: 2;
+  top: 30px;
+  left: -57px;
+  width: 256px;
+  padding: 20px 18px 23px 22px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 10px;
+  text-transform: none;
+}
+
+.modal__tooltip-text::before {
+  position: absolute;
+  top: -5px;
+  left: 47%;
+  transform: rotate(45deg);
+  width: 19px;
+  height: 19px;
+  background-color: #333333;
+  content: "";
+}
+
+.modal__tooltip-icon:hover + .modal__tooltip-text,
+.modal__tooltip-icon:focus + .modal__tooltip-text {
+  display: block;
+}
+
