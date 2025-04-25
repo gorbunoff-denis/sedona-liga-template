@@ -10,7 +10,7 @@
   padding: 8px 10px;
 }
 
-.button_brown {
+.button--brown {
   background-color: $buttons-basic;
   color: $texts-background-default;
   transition: background-color $transition-delay;
@@ -31,7 +31,7 @@
   }
 }
 
-.button_blue {
+.button--blue {
   background-color: $buttons-second;
   color: $texts-background-default;
   transition: background-color $transition-delay;
@@ -51,7 +51,7 @@
   }
 }
 
-.button_green {
+.button--green {
   background-color: $buttons-select;
   color: $texts-background-default;
   transition: background-color $transition-delay;
@@ -71,7 +71,7 @@
   }
 }
 
-.button_transparent {
+.button--transparent {
   background-color: transparent;
   color: $texts-background-default;
   transition: background-color $transition-delay;
