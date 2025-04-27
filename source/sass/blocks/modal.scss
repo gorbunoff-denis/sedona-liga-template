@@ -26,20 +26,20 @@
   background-color: #f2f2f2;
   border-radius: 50%;
 
-  &:hover {
-    background-color: #e6e6e6;
-  }
+  // &:hover {
+  //   background-color: #e6e6e6;
+  // }
 
-  &:focus {
-    outline: none;
-    background-color: #e6e6e6;
-    border: 3px solid #83b3d3;
-  }
+  // &:focus {
+  //   outline: none;
+  //   background-color: #e6e6e6;
+  //   border: 3px solid #83b3d3;
+  // }
 
-  :active {
-    background-color: #a1a1a1;
-    opacity: 30%;
-  }
+  // :active {
+  //   background-color: #a1a1a1;
+  //   opacity: 30%;
+  // }
 }
 
 .modal__search-form {
