@@ -115,6 +115,8 @@ input[type=number] {
 .button--brown {
   background-color: #756157;
   color: #ffffff;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
@@ -124,7 +126,7 @@ input[type=number] {
 }
 .button--brown:active {
   background-color: #756157;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.3019607843);
 }
 .button--brown:disabled {
   background-color: #e5e5e5;
@@ -132,17 +134,19 @@ input[type=number] {
 }
 
 .button--blue {
-  background-color: #82b3d3;
+  background-color: #83b3d3;
   color: #ffffff;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 .button--blue:hover, .button--blue :focus-visible {
   background-color: #68a2ca;
 }
 .button--blue:active {
-  background-color: #82b3d3;
-  color: rgba(0, 0, 0, 0.3);
+  background-color: #68a2ca;
+  color: rgba(255, 255, 255, 0.3019607843);
 }
 .button--blue:disabled {
   background-color: #e5e5e5;
@@ -154,13 +158,15 @@ input[type=number] {
   color: #ffffff;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 .button--green:hover, .button--green :focus-visible {
   background-color: #6c9e42;
 }
 .button--green:active {
   background-color: #7db54f;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.3019607843);
 }
 .button--green:disabled {
   background-color: #e5e5e5;
@@ -177,10 +183,10 @@ input[type=number] {
   color: rgba(255, 255, 255, 0.6);
 }
 .button--transparent:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.3019607843);
 }
 .button--transparent:disabled {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.1019607843);
 }
 
 .container {

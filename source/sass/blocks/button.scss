@@ -13,78 +13,82 @@
 .button--brown {
   background-color: $buttons-basic;
   color: $texts-background-default;
+  transition: color $transition-delay;
   transition: background-color $transition-delay;
 
   &:hover,
   :focus-visible {
-    background-color: $buttons-brown-hover;
+    background-color: #615048;
   }
 
   &:active {
-    background-color: $buttons-basic;
-    color: $background-basic-2;
+    background-color: #756157;
+    color: #ffffff4d;
   }
 
   &:disabled {
-    background-color: $buttons-disabled;
-    color: $texts-background-default;
+    background-color: #e5e5e5;
+    color: #ffffff;
   }
 }
 
 .button--blue {
-  background-color: $buttons-second;
-  color: $texts-background-default;
+  background-color: #83b3d3;
+  color: #ffffff;
   transition: background-color $transition-delay;
+  transition: color $transition-delay;
 
   &:hover,:focus-visible {
-    background-color: $buttons-blue-hover;
+    background-color: #68a2ca;
   }
 
   &:active {
-    background-color: $buttons-second;
-    color: $background-basic-2;
+    background-color: #68a2ca;
+    color: #ffffff4d;
+
   }
 
   &:disabled {
-    background-color: $buttons-disabled;
-    color: $texts-background-default;
+    background-color: #e5e5e5;
+    color: #ffffff;
   }
 }
 
 .button--green {
-  background-color: $buttons-select;
-  color: $texts-background-default;
+  background-color: #7db54f;
+  color: #ffffff;
   transition: background-color $transition-delay;
+  transition: color $transition-delay;
 
   &:hover,:focus-visible {
-    background-color: $buttons-green-hover;
+    background-color: #6c9e42;
   }
 
   &:active {
-    background-color: $buttons-select;
-    color: $background-basic-2;
+    background-color: #7db54f;
+    color: #ffffff4d;
   }
 
   &:disabled {
-    background-color: $buttons-disabled;
-    color: $texts-background-default;
+    background-color: #e5e5e5;
+    color: #ffffff;
   }
 }
 
 .button--transparent {
   background-color: transparent;
-  color: $texts-background-default;
+  color: #ffffff;
   transition: background-color $transition-delay;
 
   &:hover,:focus-visible {
-    color: $texts-background-hover;
+    color: #ffffff99;
   }
 
   &:active {
-    color: $background-basic-2;
+    color: #ffffff4d;
   }
 
   &:disabled {
-    color: $texts-background-default;
+    color: #ffffff1a;
   }
 }
