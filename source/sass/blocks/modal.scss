@@ -1,11 +1,11 @@
 .modal {
-  //display: block;
+  display: block;
   border: none;
   border-radius: 30px;
   position: relative;
   width: 717px;
   min-height: 44px;
-  padding: 64px 70px;
+  padding: 64px 71px;
   background-color: $background-basic-1;
   box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.15);
 
@@ -26,20 +26,19 @@
   background-color: #f2f2f2;
   border-radius: 50%;
 
-  // &:hover {
-  //   background-color: #e6e6e6;
-  // }
+  &:hover {
+    background-color: #E5E5E5;
+  }
 
-  // &:focus {
-  //   outline: none;
-  //   background-color: #e6e6e6;
-  //   border: 3px solid #83b3d3;
-  // }
+  &:focus, &:focus-visible {
+    outline: 3px solid #83B3D3;
+  }
 
-  // :active {
-  //   background-color: #a1a1a1;
-  //   opacity: 30%;
-  // }
+  &:active {
+    background-color: #E6E6E6;
+    opacity: 0.3;
+    outline: none;
+  }
 }
 
 .modal__search-form {
@@ -84,9 +83,18 @@
   line-height: 24px;
   text-align: left;
   color: #000000;
-  background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
+  background: #f2f2f2 url("../../img/sprite/modal-calendar-icon.svg") no-repeat right 20px center;
+}
+
+.modal__input:hover {
+  background-color: #E6E6E6;
+}
+
+.modal__input:focus,
+.modal__input:focus-visible {
+  outline: 3px solid #83B3D3;
 }
 
 .modal__info {
@@ -148,8 +156,8 @@
   position: absolute;
   display: none;
   z-index: 2;
-  top: 30px;
-  left: -57px;
+  top: 38px;
+  left: -55px;
   width: 256px;
   padding: 20px 18px 23px 22px;
   font-size: 16px;
@@ -174,7 +182,18 @@
 }
 
 .modal__tooltip-icon:hover + .modal__tooltip-text,
-.modal__tooltip-icon:focus + .modal__tooltip-text {
+.modal__tooltip-icon:focus + .modal__tooltip-text,
+.modal__tooltip-icon:focus-visible + .modal__tooltip-text {
   display: block;
+}
+
+.modal__tooltip-icon:hover,
+.modal__tooltip-icon:focus,
+.modal__tooltip-icon:focus-visible {
+  opacity: 0.6;
+}
+
+.modal__tooltip-icon:active {
+  opacity: 0.3;
 }
 
