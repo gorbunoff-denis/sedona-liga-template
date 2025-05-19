@@ -32,14 +32,24 @@
   gap: 30px;
   width: fit-content;
   margin-bottom: 40px;
+}
+
+.filter__breadcrumbs-item {
+  position: relative;
+  display: flex;
+  align-items: center;
 
   &:after {
     position: absolute;
     content: "";
-    left: 21.5%;
     width: 8px;
     height: 21px;
+    margin: 0 23px;
     background: url("../img/sprite/filter-breadcrumbs-arrow-icon.svg") no-repeat center;
+  }
+
+  &:last-of-type:after {
+    content: none;
   }
 }
 
@@ -58,15 +68,20 @@
     background: url("../img/sprite/filter-breadcrumbs-home-icon.svg") no-repeat center;
     width: 12px;
     top: -1px;
+
     &:hover {
-      opacity: 0.5;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
 
 .filter__catalog {
   display: grid;
-  grid-template-columns: 220px 290px 260px auto;
+  grid-template-columns: 220px 290px 288px auto;
 }
 
 .filter__legend {
@@ -96,7 +111,11 @@
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: 0.4;
+  }
+
+  &:disabled {
+    opacity: 0.1;
   }
 }
 
@@ -112,10 +131,16 @@
 
   &:hover {
     opacity: 0.6;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: 0.4;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4)
+  }
+
+  &:disabled {
+    opacity: 0.1;
   }
 
   &--radio {
@@ -128,6 +153,7 @@
   height: 20px;
   border-radius: 6px;
   border: 3px solid $background-basic-3;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .filter__radio:focus ~ .filter__options-mark--radio  {
@@ -135,6 +161,7 @@
   height: 20px;
   border-radius: 50%;
   border: 3px solid $background-basic-3;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .filter__checkbox:checked + .filter__options-mark::before {
@@ -197,8 +224,21 @@
   border: none;
   overflow: hidden;
 
-  &:focus {
-    outline: 3px solid $icons-second;
+  &:hover {
+    background-color: #e6e6e6;
+  }
+
+  &:focus-within {
+    background-color: #e6e6e6;
+    outline: 3px solid #83b3d3;
+  }
+
+  &:active {
+    outline: 2px solid $icons-second;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
   }
 
   &--max {

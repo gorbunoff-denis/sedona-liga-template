@@ -422,6 +422,7 @@ input[type=number] {
 }
 
 .advantages__title {
+  position: relative;
   color: #000000;
   font-size: 24px;
   font-weight: 700;
@@ -430,6 +431,18 @@ input[type=number] {
   text-transform: uppercase;
   margin: 0 auto 60px;
   max-width: 175px;
+}
+.advantages__title::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  top: 85px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .advantages__subtitle {
@@ -481,18 +494,6 @@ input[type=number] {
   padding: 114px 85px;
   color: #000000;
 }
-.advantages__item:not(:first-child):not(:last-child)::after {
-  position: absolute;
-  content: "";
-  width: 60px;
-  height: 2px;
-  top: 51.5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.3);
-}
 
 .advantages__item img {
   max-height: 385px;
@@ -501,23 +502,14 @@ input[type=number] {
 .advantages__item-container p {
   color: #ffffff;
 }
+.advantages__item-container p:after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
 
 .advantages__item-container {
   position: relative;
   display: block;
   padding: 103px 85px;
-}
-.advantages__item-container::after {
-  position: absolute;
-  content: "";
-  width: 60px;
-  height: 2px;
-  top: 48.5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages__service-title {
@@ -838,13 +830,26 @@ input[type=number] {
   width: fit-content;
   margin-bottom: 40px;
 }
-.filter__breadcrumbs-list:after {
+
+.filter__breadcrumbs-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.filter__breadcrumbs-item:after {
   position: absolute;
   content: "";
-  left: 21.5%;
   width: 8px;
   height: 21px;
+  margin: 0 23px;
   background: url("../img/sprite/filter-breadcrumbs-arrow-icon.svg") no-repeat center;
+}
+.filter__breadcrumbs-item:last-of-type:after {
+  content: none;
 }
 
 .filter__breadcrumbs-link {
@@ -865,14 +870,17 @@ input[type=number] {
   top: -1px;
 }
 .filter__breadcrumbs-link--home:hover {
-  opacity: 0.5;
+  opacity: 0.6;
+}
+.filter__breadcrumbs-link--home:active {
+  opacity: 0.3;
 }
 
 .filter__catalog {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 220px 290px 260px auto;
-  grid-template-columns: 220px 290px 260px auto;
+  -ms-grid-columns: 220px 290px 288px auto;
+  grid-template-columns: 220px 290px 288px auto;
 }
 
 .filter__legend {
@@ -902,7 +910,10 @@ input[type=number] {
   opacity: 0.6;
 }
 .filter__options:active {
-  opacity: 0.3;
+  opacity: 0.4;
+}
+.filter__options:disabled {
+  opacity: 0.1;
 }
 
 .filter__options-mark {
@@ -917,9 +928,16 @@ input[type=number] {
 }
 .filter__options-mark:hover {
   opacity: 0.6;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 .filter__options-mark:active {
-  opacity: 0.3;
+  opacity: 0.4;
+  -webkit-box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+}
+.filter__options-mark:disabled {
+  opacity: 0.1;
 }
 .filter__options-mark--radio {
   border-radius: 50%;
@@ -930,6 +948,8 @@ input[type=number] {
   height: 20px;
   border-radius: 6px;
   border: 3px solid #82b3d3;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .filter__radio:focus ~ .filter__options-mark--radio {
@@ -937,6 +957,8 @@ input[type=number] {
   height: 20px;
   border-radius: 50%;
   border: 3px solid #82b3d3;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .filter__checkbox:checked + .filter__options-mark::before {
@@ -1009,8 +1031,18 @@ input[type=number] {
   border: none;
   overflow: hidden;
 }
-.filter__slider-input:focus {
+.filter__slider-input:hover {
+  background-color: #e6e6e6;
+}
+.filter__slider-input:focus-within {
+  background-color: #e6e6e6;
   outline: 3px solid #83b3d3;
+}
+.filter__slider-input:active {
+  outline: 2px solid #83b3d3;
+}
+.filter__slider-input:disabled {
+  background-color: #e5e5e5;
 }
 .filter__slider-input--max {
   border-radius: 0 4px 4px 0;
@@ -1103,16 +1135,19 @@ input[type=number] {
   -ms-grid-columns: 538px 362px auto;
   grid-template-columns: 538px 362px auto;
   padding-bottom: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .catalog__title {
   color: #000000;
   font-size: 30px;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 30px;
   text-align: left;
   text-transform: uppercase;
-  margin: 6px 0 0;
+  margin: 0;
 }
 
 .catalog__filter-sorting {
@@ -1189,7 +1224,9 @@ input[type=number] {
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-bottom: 80px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .catalog__pagination {
@@ -1215,6 +1252,13 @@ input[type=number] {
   text-align: center;
   cursor: pointer;
 }
+.catalog__pagination-item:not(:first-child):not(:nth-last-child(2)):hover, .catalog__pagination-item:not(:first-child):not(:nth-last-child(2)):focus-visible, .catalog__pagination-item:not(:first-child):not(:nth-last-child(2)):focus {
+  background-color: #68A2CA;
+}
+.catalog__pagination-item:not(:first-child):not(:nth-last-child(2)):active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3019607843);
+}
 .catalog__pagination-item--current {
   color: #000000;
   background-color: #f2f2f2;
@@ -1232,6 +1276,9 @@ input[type=number] {
   line-height: 40px;
   text-transform: uppercase;
   margin: 0;
+}
+.catalog__pagination-button > [href]:hover, .catalog__pagination-button > [href]:focus-visible, .catalog__pagination-button > [href]:focus {
+  background-color: #68A2CA;
 }
 
 .catalog__pagination-pass {
@@ -1343,7 +1390,6 @@ input[type=number] {
 }
 
 .modal {
-  display: block;
   border: none;
   border-radius: 30px;
   position: relative;
