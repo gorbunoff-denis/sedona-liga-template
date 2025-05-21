@@ -47,6 +47,12 @@
     border-color: #3f5e72;
     outline: none;
   }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+    user-select: none;
+  }
 }
 
 .catalog__view-buttons {

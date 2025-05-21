@@ -912,8 +912,13 @@ input[type=number] {
 .filter__options:active {
   opacity: 0.4;
 }
-.filter__options:disabled {
-  opacity: 0.1;
+.filter__options:has(.filter__checkbox:disabled) {
+  pointer-events: none;
+  opacity: 0.3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .filter__options-mark {
@@ -926,21 +931,25 @@ input[type=number] {
   border: none;
   border-radius: 4px;
 }
-.filter__options-mark:hover {
-  opacity: 0.6;
+.filter__options-mark:focus {
   -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 .filter__options-mark:active {
-  opacity: 0.4;
   -webkit-box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
 }
-.filter__options-mark:disabled {
-  opacity: 0.1;
-}
 .filter__options-mark--radio {
   border-radius: 50%;
+}
+
+.filter__checkbox:disabled:has(.filter__options) {
+  pointer-events: none;
+  opacity: 0.3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .filter__checkbox:focus ~ .filter__options-mark {
@@ -948,8 +957,6 @@ input[type=number] {
   height: 20px;
   border-radius: 6px;
   border: 3px solid #82b3d3;
-  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .filter__radio:focus ~ .filter__options-mark--radio {
@@ -957,8 +964,6 @@ input[type=number] {
   height: 20px;
   border-radius: 50%;
   border: 3px solid #82b3d3;
-  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .filter__checkbox:checked + .filter__options-mark::before {
@@ -1178,6 +1183,14 @@ input[type=number] {
 .catalog__filter-sorting:focus {
   border-color: #3f5e72;
   outline: none;
+}
+.catalog__filter-sorting:disabled {
+  pointer-events: none;
+  opacity: 0.3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .catalog__view-buttons {
@@ -1409,26 +1422,33 @@ input[type=number] {
 
 .modal__close-button {
   position: absolute;
-  top: 64px;
+  justify-items: center;
   right: 51px;
   width: 52px;
   height: 52px;
-  background-image: url("../img/sprite/modal-close-cross-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #f2f2f2;
   border-radius: 50%;
 }
 .modal__close-button:hover {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 .modal__close-button:focus, .modal__close-button:focus-visible {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 .modal__close-button:active {
-  background-color: #E6E6E6;
-  opacity: 0.3;
+  background-color: #e6e6e6;
   outline: none;
+}
+
+.modal__close-icon {
+  display: block;
+  fill: #000000;
+  width: 15px;
+  height: 15px;
+}
+
+.modal__close-button:active .modal__close-icon {
+  fill-opacity: 0.3;
 }
 
 .modal__search-form {
@@ -1479,7 +1499,7 @@ input[type=number] {
   color: #000000;
   border: none;
   border-radius: 4px;
-  background: #f2f2f2 url("../../img/sprite/modal-calendar-icon.svg") no-repeat right 20px center;
+  background: #f2f2f2 url("../img/sprite/modal-calendar-icon.svg") no-repeat right 20px center;
 }
 
 .modal__input:hover {
@@ -1564,6 +1584,8 @@ input[type=number] {
   background-color: #333333;
   border-radius: 10px;
   text-transform: none;
+  -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
 }
 
 .modal__tooltip-text::before {

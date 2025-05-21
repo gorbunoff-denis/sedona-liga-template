@@ -16,28 +16,37 @@
 
 .modal__close-button {
   position: absolute;
-  top: 64px;
+  justify-items: center;
   right: 51px;
   width: 52px;
   height: 52px;
-  background-image: url("../img/sprite/modal-close-cross-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #f2f2f2;
   border-radius: 50%;
 
   &:hover {
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
   }
 
   &:focus, &:focus-visible {
-    outline: 3px solid #83B3D3;
+    outline: 3px solid #83b3d3;
   }
 
   &:active {
-    background-color: #E6E6E6;
-    opacity: 0.3;
+    background-color: #e6e6e6;
     outline: none;
+  }
+}
+
+.modal__close-icon {
+  display: block;
+  fill: #000000;
+  width: 15px;
+  height: 15px;
+}
+
+.modal__close-button {
+  &:active .modal__close-icon {
+    fill-opacity: 0.3;
   }
 }
 
@@ -168,6 +177,7 @@
   background-color: #333333;
   border-radius: 10px;
   text-transform: none;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
 }
 
 .modal__tooltip-text::before {
