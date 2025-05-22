@@ -27,13 +27,18 @@
     background-color: #e5e5e5;
   }
 
-  &:focus, &:focus-visible {
+  &:focus,
+  &:focus-visible {
     outline: 3px solid #83b3d3;
   }
 
   &:active {
     background-color: #e6e6e6;
     outline: none;
+  }
+
+  &:active .modal__close-icon {
+    fill-opacity: 0.3;
   }
 }
 
@@ -42,12 +47,6 @@
   fill: #000000;
   width: 15px;
   height: 15px;
-}
-
-.modal__close-button {
-  &:active .modal__close-icon {
-    fill-opacity: 0.3;
-  }
 }
 
 .modal__search-form {
@@ -66,7 +65,7 @@
   text-transform: uppercase;
 }
 
-.modal__label{
+.modal__label {
   grid-column-start: 1;
   align-self: center;
   font-weight: 700;
@@ -98,18 +97,17 @@
 }
 
 .modal__input:hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .modal__input:focus,
 .modal__input:focus-visible {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .modal__info {
   color: #333333;
   grid-column: 2 / -1;
-  margin: 0;
   font-size: 16px;
   line-height: 16px;
   margin: 6px 0 26px 20px;
@@ -149,7 +147,7 @@
 .modal__tooltip-icon {
   position: absolute;
   right: 47px;
-  bottom: 0px;
+  bottom: 0;
   width: 26px;
   height: 26px;
   background-image: url("../img/sprite/modal-info-icon.svg");

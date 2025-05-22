@@ -1,11 +1,11 @@
 .subscribe {
   background-image:
-  image-set(
-    "../img/subscribe-background@1x.webp" type("image/webp") 1x,
-    "../img/subscribe-background@2x.webp" type("image/webp") 2x,
-    "../img/subscribe-background@1x.jpg" type("image/jpg") 1x,
-    "../img/subscribe-background@2x.jpg" type("image/jpg") 2x
-  );
+    image-set(
+      "../img/subscribe-background@1x.webp" type("image/webp") 1x,
+      "../img/subscribe-background@2x.webp" type("image/webp") 2x,
+      "../img/subscribe-background@1x.jpg" type("image/jpg") 1x,
+      "../img/subscribe-background@2x.jpg" type("image/jpg") 2x
+    );
   background-color: #312035;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -60,7 +60,6 @@
 
 .subscribe__field {
   font-family: inherit;
-  color: $texts-background-default;
   width: 452px;
   min-height: 50px;
   color: $texts-texts-basic;

@@ -110,6 +110,8 @@ input[type=number] {
   border-radius: 4px;
   cursor: pointer;
   padding: 8px 10px;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .button--brown {
@@ -330,7 +332,7 @@ input[type=number] {
 .navigation__user-favourites {
   position: absolute;
   left: 20px;
-  top: 0px;
+  top: 0;
   padding: 5px;
   font-weight: 400;
   font-size: 10px;
@@ -425,20 +427,9 @@ input[type=number] {
   margin: 0 auto 60px;
   max-width: 175px;
 }
-.advantages__title::after {
-  position: absolute;
-  content: "";
-  width: 60px;
-  height: 2px;
-  top: 85px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.3);
-}
 
 .advantages__subtitle {
+  position: relative;
   color: #333333;
   font-size: 18px;
   font-weight: 400;
@@ -446,6 +437,18 @@ input[type=number] {
   text-align: center;
   margin: 0 auto;
   max-width: 230px;
+}
+.advantages__subtitle::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  top: -32px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .advantages__list {
@@ -545,6 +548,7 @@ input[type=number] {
   min-height: 385px;
   background-repeat: no-repeat;
   background-position-x: center;
+  padding: 10px;
 }
 .advantages__service-item:nth-child(3n-2) {
   background-color: rgba(131, 179, 211, 0.12);
@@ -667,7 +671,6 @@ input[type=number] {
 
 .subscribe__field {
   font-family: inherit;
-  color: #ffffff;
   width: 452px;
   min-height: 50px;
   color: #000000;
@@ -737,7 +740,6 @@ input[type=number] {
   -webkit-transition: fill 0.3s;
   transition: fill 0.3s;
 }
-
 .footer__social-link path:hover, .footer__social-link path:focus {
   fill: #68a2ca;
 }
@@ -766,15 +768,11 @@ input[type=number] {
 }
 
 .footer__logo-link {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
   position: relative;
   top: 1px;
 }
-
-.footer__logo-link svg {
-  -webkit-transition: fill 0.3s;
-  transition: fill 0.3s;
-}
-
 .footer__logo-link:hover svg, .footer__logo-link:focus svg {
   fill: #756157;
 }
@@ -833,16 +831,14 @@ input[type=number] {
       -ms-flex-align: center;
           align-items: center;
 }
-.filter__breadcrumbs-item:after {
+.filter__breadcrumbs-item:not(:first-of-type)::after {
+  display: inline-block;
+  left: -19px;
   position: absolute;
   content: "";
   width: 8px;
   height: 21px;
-  margin: 0 23px;
   background: url("../img/sprite/filter-breadcrumbs-arrow-icon.svg") no-repeat center;
-}
-.filter__breadcrumbs-item:last-of-type:after {
-  content: none;
 }
 
 .filter__breadcrumbs-link {
@@ -895,6 +891,10 @@ input[type=number] {
 }
 
 .filter__options {
+  display: inline-block;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  max-width: 200px;
   position: relative;
   cursor: pointer;
   padding-left: 36px;
@@ -913,11 +913,19 @@ input[type=number] {
       -ms-user-select: none;
           user-select: none;
 }
+.filter__options:has(.filter__radio:disabled) {
+  pointer-events: none;
+  opacity: 0.3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 
 .filter__options-mark {
   position: absolute;
   left: 0;
-  top: 2px;
+  margin-top: -2px;
   width: 20px;
   height: 20px;
   background-color: #ffffff;
@@ -1006,7 +1014,7 @@ input[type=number] {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   gap: 2px;
-  top: -2px;
+  margin-top: -3px;
 }
 
 .filter__slider-input {
@@ -1043,13 +1051,14 @@ input[type=number] {
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 2px;
-  margin-top: 30px;
+  margin-top: 35px;
+  margin-left: 2px;
 }
 
 .filter__slider-range {
   position: absolute;
-  left: 0;
-  width: 226px;
+  left: 1px;
+  width: 225px;
   height: 4px;
   background-color: #ffffff;
 }
@@ -1074,14 +1083,14 @@ input[type=number] {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 0;
+  left: -1px;
 }
 .filter__slider-toggle--max {
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: -1px;
+  right: 0;
 }
 
 .filter__buttons-wrapper {
@@ -1183,8 +1192,8 @@ input[type=number] {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   max-width: 160px;
   gap: 8px;
   padding: 0;
@@ -1232,8 +1241,8 @@ input[type=number] {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   gap: 8px;
 }
 
@@ -1273,15 +1282,23 @@ input[type=number] {
   line-height: 40px;
   text-transform: uppercase;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .catalog__pagination-button > [href]:hover, .catalog__pagination-button > [href]:focus-visible, .catalog__pagination-button > [href]:focus {
   background-color: #68a2ca;
 }
 
 .catalog__pagination-pass {
+  display: block;
   font-size: 22px;
   font-weight: 400;
   line-height: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
 .hotel-card {
@@ -1423,16 +1440,15 @@ input[type=number] {
   background-color: #e6e6e6;
   outline: none;
 }
+.modal__close-button:active .modal__close-icon {
+  fill-opacity: 0.3;
+}
 
 .modal__close-icon {
   display: block;
   fill: #000000;
   width: 15px;
   height: 15px;
-}
-
-.modal__close-button:active .modal__close-icon {
-  fill-opacity: 0.3;
 }
 
 .modal__search-form {
@@ -1487,18 +1503,17 @@ input[type=number] {
 }
 
 .modal__input:hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .modal__input:focus,
 .modal__input:focus-visible {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .modal__info {
   color: #333333;
   grid-column: 2/-1;
-  margin: 0;
   font-size: 16px;
   line-height: 16px;
   margin: 6px 0 26px 20px;
@@ -1540,7 +1555,7 @@ input[type=number] {
 .modal__tooltip-icon {
   position: absolute;
   right: 47px;
-  bottom: 0px;
+  bottom: 0;
   width: 26px;
   height: 26px;
   background-image: url("../img/sprite/modal-info-icon.svg");

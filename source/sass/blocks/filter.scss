@@ -1,12 +1,12 @@
 .filter {
   position: relative;
   background-image:
-  image-set(
-    "../img/filter-background@1x.webp" type("image/webp") 1x,
-    "../img/filter-background@2x.webp" type("image/webp") 2x,
-    "../img/filter-background@1x.jpg" type("image/jpg") 1x,
-    "../img/filter-background@2x.jpg" type("image/jpg") 2x
-  );
+    image-set(
+      "../img/filter-background@1x.webp" type("image/webp") 1x,
+      "../img/filter-background@2x.webp" type("image/webp") 2x,
+      "../img/filter-background@1x.jpg" type("image/jpg") 1x,
+      "../img/filter-background@2x.jpg" type("image/jpg") 2x
+    );
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: #ffffff;
@@ -39,17 +39,14 @@
   display: flex;
   align-items: center;
 
-  &:after {
+  &:not(:first-of-type)::after {
+    display: inline-block;
+    left: -19px;
     position: absolute;
     content: "";
     width: 8px;
     height: 21px;
-    margin: 0 23px;
     background: url("../img/sprite/filter-breadcrumbs-arrow-icon.svg") no-repeat center;
-  }
-
-  &:last-of-type:after {
-    content: none;
   }
 }
 
@@ -102,6 +99,9 @@
 }
 
 .filter__options {
+  display: inline-block;
+  align-content: center;
+  max-width: 200px;
   position: relative;
   cursor: pointer;
   padding-left: 36px;
@@ -119,12 +119,18 @@
     opacity: 0.3;
     user-select: none;
   }
+
+  &:has(.filter__radio:disabled) {
+    pointer-events: none;
+    opacity: 0.3;
+    user-select: none;
+  }
 }
 
 .filter__options-mark {
   position: absolute;
   left: 0;
-  top: 2px;
+  margin-top: -2px;
   width: 20px;
   height: 20px;
   background-color: $texts-background-default;
@@ -151,7 +157,7 @@
   border: 3px solid $background-basic-3;
 }
 
-.filter__radio:focus ~ .filter__options-mark--radio  {
+.filter__radio:focus ~ .filter__options-mark--radio {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -204,7 +210,7 @@
   display: flex;
   flex-flow: row nowrap;
   gap: 2px;
-  top: -2px;
+  margin-top: -3px;
 }
 
 .filter__slider-input {
@@ -246,13 +252,14 @@
   height: 4px;
   background-color: $texts-background-small;
   border-radius: 2px;
-  margin-top: 30px;
+  margin-top: 35px;
+  margin-left: 2px;
 }
 
 .filter__slider-range {
   position: absolute;
-  left: 0;
-  width: 226px;
+  left: 1px;
+  width: 225px;
   height: 4px;
   background-color: $background-basic-1;
 }
@@ -277,13 +284,13 @@
   &--min {
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
+    left: -1px;
   }
 
   &--max {
     top: 50%;
     transform: translateY(-50%);
-    right: -1px;
+    right: 0;
   }
 }
 
