@@ -13,17 +13,16 @@
 .button--brown {
   background-color: $buttons-basic;
   color: $texts-background-default;
-  transition: color $transition-delay;
-  transition: background-color $transition-delay;
+  transition: color $transition-delay, background-color $transition-delay;
 
   &:hover,
-  :focus-visible {
+  &:focus-visible {
     background-color: #615048;
   }
 
   &:active {
     background-color: #756157;
-    color: #ffffff4d;
+    color: rgba(255, 255, 255, 0.3);
   }
 
   &:disabled {
@@ -35,17 +34,16 @@
 .button--blue {
   background-color: #83b3d3;
   color: #ffffff;
-  transition: background-color $transition-delay;
-  transition: color $transition-delay;
+  transition: background-color $transition-delay, color $transition-delay;
 
-  &:hover,:focus-visible {
+  &:hover,
+  &:focus-visible {
     background-color: #68a2ca;
   }
 
   &:active {
     background-color: #68a2ca;
-    color: #ffffff4d;
-
+    color: rgba(255, 255, 255, 0.3);
   }
 
   &:disabled {
@@ -57,16 +55,16 @@
 .button--green {
   background-color: #7db54f;
   color: #ffffff;
-  transition: background-color $transition-delay;
-  transition: color $transition-delay;
+  transition: background-color $transition-delay, color $transition-delay;
 
-  &:hover,:focus-visible {
+  &:hover,
+  &:focus-visible {
     background-color: #6c9e42;
   }
 
   &:active {
     background-color: #7db54f;
-    color: #ffffff4d;
+    color: rgba(255, 255, 255, 0.3);
   }
 
   &:disabled {
@@ -80,15 +78,16 @@
   color: #ffffff;
   transition: background-color $transition-delay;
 
-  &:hover,:focus-visible {
-    color: #ffffff99;
+  &:hover,
+  &:focus-visible {
+    color: rgba(255, 255, 255, 0.6);
   }
 
   &:active {
-    color: #ffffff4d;
+    color: rgba(255, 255, 255, 0.3);
   }
 
   &:disabled {
-    color: #ffffff1a;
+    color: rgba(255, 255, 255, 0.1);
   }
 }

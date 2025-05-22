@@ -23,7 +23,8 @@
 }
 
 .footer__social-link path {
-  &:hover, :focus {
+  &:hover,
+  &:focus {
     fill: $icons-second-hover;
   }
 
@@ -44,7 +45,8 @@
   margin: 0;
   transition: color $transition-delay;
 
-  &:hover,:focus {
+  &:hover,
+  &:focus {
     color: $texts-hover;
   }
 
@@ -63,7 +65,8 @@
 }
 
 .footer__logo-link {
-  &:hover,:focus {
+  &:hover,
+  &:focus {
     svg {
       fill: $icons-hover;
     }

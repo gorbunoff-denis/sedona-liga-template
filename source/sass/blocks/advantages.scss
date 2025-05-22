@@ -90,17 +90,6 @@
   &:not(:first-child):not(:last-child) {
     padding: 114px 85px;
     color: $texts-texts-basic;
-
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   width: 60px;
-  //   height: 2px;
-  //   top: 51.5%;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   background-color: $background-basic-2;
-  //   }
   }
 }
 
@@ -111,7 +100,7 @@
 .advantages__item-container p {
   color: $texts-background-default;
 
-  &:after {
+  &::after {
     background-color: $texts-background-active;
   }
 }
